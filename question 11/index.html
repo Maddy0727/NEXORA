@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Treasure Hunt</title>
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+    margin-top:50px;
+}
+button{
+    width:220px;
+    padding:10px;
+    margin:10px;
+    font-size:18px;
+}
+#location{
+    display:none;
+    margin-top:20px;
+    color:green;
+    font-size:24px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Question 1</h2>
+<p>Which is the largest organ inside the human body?</p>
+
+<button onclick="check('A')">A.Brain</button><br>
+<button onclick="check('B')">B.Liver</button><br>
+<button onclick="check('C')">C.Heart</button><br>
+<button onclick="check('D')">D.Lung</button>
+
+<h3 id="result"></h3>
+
+<div id="location">
+📍 Next Location:<br>
+Library - 2nd Floor
+</div>
+
+<script>
+function check(ans){
+
+if(ans=="B"){
+document.getElementById("result").innerHTML="✅ Correct Answer!";
+document.getElementById("location").style.display="block";
+}
+else{
+document.getElementById("result").innerHTML="❌ Wrong Answer! Try Again.";
+}
+}
+</script>
+
+</body>
+</html>
+
